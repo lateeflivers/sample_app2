@@ -2,7 +2,7 @@ require 'spec_helper'
 require 'support/utilities'
 
 describe "Static pages" do
-
+    include Rails.application.routes.url_helpers
 #    let(:base_title) {"Ruby on Rails Tutorial Sample App"}  
     subject {page}
 
@@ -13,17 +13,6 @@ describe "Static pages" do
 	it { should have_title(full_title(''))}
 	it { should_not have_title('| Home')}
 
-#	it "should have the content 'Sample App'" do
-#	    expect(page).to have_content('Sample App')
-#	end
-
-#	it "should have the title 'Home'" do
-    #	    expect(page).to have_title("#{base_title}") # | Home")
-    #	end
-	
-    #	it "should not have a custom page title" do
-    #	    expect(page).not_to have_title('| Home')
-    #	end
     end
 
     describe "Help page" do
